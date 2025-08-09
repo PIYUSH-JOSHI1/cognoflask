@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}Learning Disability Support Platform{% endblock %}
+
+{% block content %}
+<div class="grid grid-2" style="gap: 3rem; align-items: center; min-height: 70vh;">
+    <div>
+        <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1.5rem; color: #1e293b;">
+            Comprehensive Learning Support Platform
+        </h1>
+        <p style="font-size: 1.25rem; color: #64748b; margin-bottom: 2rem; line-height: 1.8;">
+            AI-powered support for children with learning disabilities including Dyslexia, Dyscalculia, Dysgraphia, and Dyspraxia. 
+            Personalized learning experiences with real-time progress tracking.
+        </p>
+        
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            {% if not session.user_id %}
+                <a href="/auth/login" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                    Get Started
+                </a>
+                <a href="/auth/register" class="btn btn-success" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                    Create Account
+                </a>
+            {% else %}
+                <a href="/dashboard" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                    Go to Dashboard
+                </a>
+            {% endif %}
+        </div>
+    </div>
+    
+    <div>
+        <div class="grid grid-2" style="gap: 1.5rem;">
+            <div class="card dyslexia-bg" style="text-align: center; padding: 1.5rem;">
+                <i class="fas fa-book-open dyslexia-color" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                <h3 style="color: #1e293b; margin-bottom: 0.5rem;">Dyslexia</h3>
+                <p style="color: #64748b; font-size: 0.9rem;">Reading support with text simplification and phonics games</p>
+            </div>
+            
+            <div class="card dyscalculia-bg" style="text-align: center; padding: 1.5rem;">
+                <i class="fas fa-calculator dyscalculia-color" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                <h3 style="color: #1e293b; margin-bottom: 0.5rem;">Dyscalculia</h3>
+                <p style="color: #64748b; font-size: 0.9rem;">Math support with visual problems and number games</p>
+            </div>
+            
+            <div class="card dysgraphia-bg" style="text-align: center; padding: 1.5rem;">
+                <i class="fas fa-pen dysgraphia-color" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                <h3 style="color: #1e293b; margin-bottom: 0.5rem;">Dysgraphia</h3>
+                <p style="color: #64748b; font-size: 0.9rem;">Writing support with handwriting practice and analysis</p>
+            </div>
+            
+            <div class="card dyspraxia-bg" style="text-align: center; padding: 1.5rem;">
+                <i class="fas fa-running dyspraxia-color" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                <h3 style="color: #1e293b; margin-bottom: 0.5rem;">Dyspraxia</h3>
+                <p style="color: #64748b; font-size: 0.9rem;">Motor skills with balance training and coordination games</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card" style="margin-top: 4rem;">
+    <div class="card-header" style="text-align: center;">
+        <h2 class="card-title">Platform Features</h2>
+        <p style="color: #64748b;">Comprehensive tools designed for different learning needs</p>
+    </div>
+    
+    <div class="grid grid-3">
+        <div style="text-align: center;">
+            <i class="fas fa-robot" style="font-size: 2.5rem; color: #3b82f6; margin-bottom: 1rem;"></i>
+            <h4 style="margin-bottom: 0.5rem;">AI-Powered Analysis</h4>
+            <p style="color: #64748b; font-size: 0.9rem;">Intelligent text simplification, math problem generation, and writing analysis</p>
+        </div>
+        
+        <div style="text-align: center;">
+            <i class="fas fa-chart-line" style="font-size: 2.5rem; color: #10b981; margin-bottom: 1rem;"></i>
+            <h4 style="margin-bottom: 0.5rem;">Progress Tracking</h4>
+            <p style="color: #64748b; font-size: 0.9rem;">Detailed analytics and progress reports stored in secure files</p>
+        </div>
+        
+        <div style="text-align: center;">
+            <i class="fas fa-gamepad" style="font-size: 2.5rem; color: #f59e0b; margin-bottom: 1rem;"></i>
+            <h4 style="margin-bottom: 0.5rem;">Interactive Games</h4>
+            <p style="color: #64748b; font-size: 0.9rem;">Engaging educational games tailored for each learning disability</p>
+        </div>
+        
+        <div style="text-align: center;">
+            <i class="fas fa-video" style="font-size: 2.5rem; color: #ef4444; margin-bottom: 1rem;"></i>
+            <h4 style="margin-bottom: 0.5rem;">Camera Integration</h4>
+            <p style="color: #64748b; font-size: 0.9rem;">Live camera exercises for motor skills and balance training</p>
+        </div>
+        
+        <div style="text-align: center;">
+            <i class="fas fa-mobile-alt" style="font-size: 2.5rem; color: #8b5cf6; margin-bottom: 1rem;"></i>
+            <h4 style="margin-bottom: 0.5rem;">Responsive Design</h4>
+            <p style="color: #64748b; font-size: 0.9rem;">Works seamlessly on all devices - desktop, tablet, and mobile</p>
+        </div>
+        
+        <div style="text-align: center;">
+            <i class="fas fa-file-csv" style="font-size: 2.5rem; color: #06b6d4; margin-bottom: 1rem;"></i>
+            <h4 style="margin-bottom: 0.5rem;">File-Based Storage</h4>
+            <p style="color: #64748b; font-size: 0.9rem;">All data stored securely in CSV files for easy access and backup</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

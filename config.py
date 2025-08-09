@@ -15,3 +15,6 @@ class Config:
     
     # Upload Configuration
     MAX_CONTENT_LENGTH = 16 * 1024 * 1024  # 16MB max file size
+    
+    # Production Configuration
+    DEBUG = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'

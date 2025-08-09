@@ -8,7 +8,7 @@ import random
 import os
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 
-import tensorflow as tf
+
 
 dyslexia_bp = Blueprint('dyslexia', __name__)
 

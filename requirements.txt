@@ -13,3 +13,4 @@ sentencepiece==0.1.99
 torch==2.1.0
 accelerate==0.24.1
 mediapipe==0.10.9
+tensorflow==2.15.0
